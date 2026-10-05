@@ -8,7 +8,7 @@ transacoes.*,
     CASE 
         WHEN transacoes.qtdePontos < 10 THEN 'Baixo'
         WHEN transacoes.qtdePontos < 500 THEN 'Médio'
-        WHEN transacoes.qtdePontos >= 500 THEN 'Alto'
+        ELSE 'Alto'     
     END AS CategoriaPontos
 
 FROM transacoes

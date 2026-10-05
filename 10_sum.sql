@@ -7,9 +7,9 @@ SELECT
 
         sum(CASE
              WHEN QtdePontos < 0 THEN QtdePontos
-        END) AS QtdePontosNeg
+        END) AS QtdePontosNeg,
 
-                count(CASE
+                count( CASE
              WHEN QtdePontos < 0 THEN QtdePontos
         END) AS QtdeTransacoesNeg
         
@@ -19,4 +19,3 @@ FROM transacoes
 WHERE DtCriacao > '2025-07-01'
 AND DtCriacao < '2025-08-01'
 
-ORDER BY QtdePontos
